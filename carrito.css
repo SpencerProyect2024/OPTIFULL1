@@ -1,0 +1,251 @@
+/* Importación de fuentes (si no se hizo en el HTML) */
+/* @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@300;400;700&family=Patrick+Hand&display=swap'); */
+
+/* Reset básico (si no lo tienes ya en otro archivo global) */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif; /* Fuente principal */
+    background-color: #f4f4f4; /* Un fondo claro similar a tus otras páginas */
+    color: #333;
+    line-height: 1.6;
+}
+
+.contenedor {
+    padding: 60px 0; /* Espaciado vertical similar a tus secciones */
+    width: 90%;
+    max-width: 1000px; /* Ancho máximo consistente */
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo {
+    color: #000000; /* Color de título consistente */
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: "Alfa Slab One", serif; /* Fuente para títulos */
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Header específico para la página del carrito */
+header {
+    width: 100%;
+    background: #f5f4f5; /* Un fondo claro para el header */
+    position: relative;
+}
+
+header .contenedor {
+    padding-top: 80px; /* Ajusta el padding superior según tu header */
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+nav {
+    text-align: right;
+    padding: 30px 50px 0 0; /* Espaciado de la navegación */
+}
+
+nav > a {
+    color: #000000;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav > a:hover {
+    text-decoration: underline;
+}
+
+.textos-header h1 {
+    font-size: 50px;
+    color: #0f0f0f;
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.textos-header h2 {
+    font-size: 30px;
+    font-weight: 300;
+    color: #333; /* Un color más oscuro para el subtítulo */
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Asegúrate de tener el SVG correcto para la ola */
+}
+
+/* Estilos específicos para la lista de gafas en formato de cuadrícula */
+#lista-de-gafas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta el ancho mínimo según necesites */
+    gap: 20px; /* Espacio entre las gafas */
+    margin-bottom: 40px; /* Aumenta el margen inferior para separar del carrito total */
+}
+
+#lista-de-gafas .gafa-disponible {
+    display: flex;
+    flex-direction: column; /* Imagen arriba, texto y botón abajo */
+    align-items: center;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    min-height: 320px; /* Ajusta este valor según la altura aproximada */
+}
+
+#lista-de-gafas .gafa-disponible img {
+    width: 100%;
+    max-width: 150px; /* Ajusta el tamaño máximo de la imagen */
+    height: auto;
+    object-fit: contain; /* Para que la imagen se ajuste sin deformarse */
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+#lista-de-gafas .gafa-info {
+    margin-bottom: 10px;
+    text-align: center; /* Centra el texto de la información de la gafa */
+    flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el texto verticalmente */
+}
+
+#lista-de-gafas .gafa-info p {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+#lista-de-gafas .seleccionar-btn,
+#lista-de-gafas .seleccionado {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8em; /* Un poco más pequeño */
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ancho completo del contenedor */
+    box-sizing: border-box; /* Para que el padding no aumente el ancho */
+    margin-top: auto; /* Empuja el botón hacia la parte inferior */
+}
+
+#lista-de-gafas .seleccionado {
+    background-color: #28a745;
+    cursor: default;
+}
+
+#lista-de-gafas .seleccionar-btn:hover {
+    background-color: #0056b3;
+}
+
+#lista-de-gafas .seleccionado:hover {
+    background-color: #28a745;
+}
+
+#carrito-total {
+    text-align: center; /* Centra el contenido */
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 40px; /* Aumenta el margen superior */
+    padding-top: 20px; /* Añade un poco de espacio interno arriba */
+    border-top: 1px solid #eee; /* Opcional: una línea divisoria */
+}
+
+#carrito-total p {
+    margin-bottom: 10px; /* Espacio entre el texto y el botón */
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 20px;
+    background: #2a9bf8; /* Un color акцентный para el botón */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.boton:hover {
+    background-color: #1e77c2; /* Un tono más oscuro al hacer hover */
+}
+
+.boton:not(:disabled) {
+    background-color: #28a745; /* Cambia a un color verde al habilitarse */
+    cursor: pointer;
+    /* Puedes añadir una pequeña animación si lo deseas */
+    /* animation: pulse 1s infinite alternate; */
+}
+
+.boton:not(:disabled):hover {
+    background-color: #1e7e34; /* Un tono más oscuro al hacer hover cuando está habilitado */
+}
+
+/* Ejemplo de animación (opcional) */
+/* @keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+} */
+
+#seleccion-vacia {
+    font-style: italic;
+    color: #777;
+    padding: 20px 0;
+    text-align: center;
+    display: none; /* Oculto por defecto */
+}
+
+/* Footer - Copia los estilos de tu footer aquí */
+footer {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(42,137,230,0.969625350140056) 50%, rgba(69,208,252,0.9051995798319328) 100%);
+    padding: 60px 0 30px 0;
+    margin-top: 40px;
+}
+
+.contenedor-footer {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #000000;
+    text-align: center;
+}
+
+.content-foo h4 {
+    color: #111111;
+    border-bottom: 3px solid #0c0c0c;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p {
+    color: #1a1919;
+}
+
+.titulo-final {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #080808;
+}

@@ -1,0 +1,400 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background: linear-gradient(to right,#ffffff,#ffffff);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.container1{
+    background: linear-gradient(to right,#ffffff,#ffffff);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.slider{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.slider span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin:center ;
+    transform-style:preserve-3d ;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+}
+
+.slider span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 2s;
+}
+
+.slider span:hover img{
+    transform: translateY(-50px)scale(1.2);
+}
+
+.body1{
+ margin: 0;
+ padding: 0;
+ width: 100%;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ background: linear-gradient(100deg, rgb(255, 255, 255) 0% rgb(50,112,118)100%);
+}
+
+.gallery{
+    width: 100%;
+
+}
+
+.porta{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffcfc;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image {
+    width: 30%;  Ajusta el tamaño según tu preferencia */
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .image {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .image {
+        width: 100%;
+    }
+}
+
+
+.toy {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.toy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px  10px #000;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: aliceblue;
+    background: #000;
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: #000;
+    padding: 15px;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a {
+    color: #f3f3f3;
+}
+
+.card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back p {
+    letter-spacing: 1px;
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/* Media queries para hacer responsive */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 250px;
+        height: 300px;
+    }
+
+    .card .front h3 {
+        font-size: 18px;
+    }
+
+    .card .back h3 {
+        font-size: 24px;
+    }
+
+    .card .back .link a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .card {
+        width: 200px;
+        height: 250px;
+    }
+
+    .card .front h3 {
+        font-size: 16px;
+    }
+
+    .card .back h3 {
+        font-size: 20px;
+    }
+
+    .card .back .link a {
+        font-size: 12px;
+    }
+}
+
+
+
+.profe{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+.image-container {
+    position: relative;
+    width:500px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: 300px; /* Ajusta el alto de la imagen según sea necesario */
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 10px 20px rgba(29, 85, 238, 0.473), 0 -10px 20px rgba(0, 0, 0, 0.3) inset;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: translateY(-5px);
+}
+
+/* Media queries para hacer responsive */
+@media screen and (max-width: 768px) {
+    .image-container {
+        width: 250px; /* Ajusta el ancho del contenedor para dispositivos medianos */
+        height: 250px; /* Ajusta el alto del contenedor para dispositivos medianos */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .image-container {
+        width: 200px; /* Ajusta el ancho del contenedor para dispositivos pequeños */
+        height: 200px; /* Ajusta el alto del contenedor para dispositivos pequeños */
+    }
+}
+
+
+
+  
+
+.circulo {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fffcfc;
+}
+
+.portfolio1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.item h3 {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Media queries para hacer responsive */
+@media screen and (max-width: 768px) {
+    .portfolio {
+        width: 90%;
+    }
+
+    .item {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .item {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.videos {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.video-item {
+    width: 300px;
+    margin: 20px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    .video-item {
+        width: 100%;
+    }
+}
+
+
